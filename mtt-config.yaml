@@ -1,0 +1,30 @@
+modelFileUrl: "https://github.com/mghaigh/personal-details/blob/master/personal-details.xml"
+imagesDir: "images"
+outputDirUrl: "https://github.com/mghaigh/personal-details/tree/master/generated/"
+# outputUrl: "file:///C:/Users/martin/Projects/models/personal-details/generated"
+# outputDirUrl: "file:/personal-details/generated/test/"
+modelConfig:
+  typesPackageName: "Personal Details"
+  defaults:
+    classActions:
+      - CREATE
+      - READ
+dependencies:
+  - modelFileUrl: "https://github.com/mghaigh/core-types/blob/master/generated/mtt-models/core-types.json"
+#  - modelFileUrl: "file:/core-types/generated/core-types.json"
+    version: "1.0.0"
+loader:
+  configFileUrl: "https://github.com/mghaigh/personal-details/blob/master/config/loaders/ea-xmi/application.yaml"
+  outputSubDir: "mtt-models"
+#    configUrl: "file:///C:/Users/martin/Projects/models/personal-details/config/generators/openapi/config.yaml"
+generators:
+  aoco:
+    configFileUrl: "https://github.com/mghaigh/personal-details/blob/master/config/generators/aoco/aoco.yaml"
+    outputSubDir: "specs/aoco"
+  oml:
+    configFileUrl: "https://github.com/mghaigh/personal-details/blob/master/config/generators/oml/oml.yaml"
+    outputSubDir: "specs/oml"
+
+
+
+
